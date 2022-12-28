@@ -13,8 +13,20 @@ Projeto criado para avaliar conhecimento técnico
 * MongoDB
 
 ## :rocket: Rodando o projeto
-Para rodar o repositório é necessário clonar o mesmo, dar o seguinte comando para iniciar o projeto:
+clonar o projeto:
 ```
-<linha de comando>
+git clone https://github.com/DeividCorrea/voltz.git
+```
+Comando para instalar as dependencias:
+```
+mvn clean install
+```
+Comando para iniciar a aplicação:
+```
+mvn spring-boot:run
+```
+A aplicação estara disponivel para teste em:
+```
+http://localhost:3000/swagger-ui/
+```
 
-```
