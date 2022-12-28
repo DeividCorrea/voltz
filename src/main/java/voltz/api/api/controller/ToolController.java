@@ -18,7 +18,7 @@ import java.util.List;
 import java.util.Map;
 
 @RestController
-@RequestMapping("/tools")
+@RequestMapping(value = "/tools", produces = "application/json")
 public class ToolController {
 
     @Autowired

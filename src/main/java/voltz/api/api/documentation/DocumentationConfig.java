@@ -15,8 +15,9 @@ public class DocumentationConfig {
     public Docket api() {
         return new Docket(DocumentationType.SWAGGER_2)
                 .select()
-                .apis(RequestHandlerSelectors.any())
+                .apis(RequestHandlerSelectors.basePackage("voltz.api.api.controller"))
                 .paths(PathSelectors.any())
-                .build();
+                .build()
+                ;
     }
 }

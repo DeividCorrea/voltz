@@ -16,4 +16,5 @@ Projeto criado para avaliar conhecimento técnico
 Para rodar o repositório é necessário clonar o mesmo, dar o seguinte comando para iniciar o projeto:
 ```
 <linha de comando>
+
 ```
