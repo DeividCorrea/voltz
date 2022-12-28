@@ -8,6 +8,9 @@ Projeto criado para avaliar conhecimento técnico
 * <b>Rota para cadastro</b>: Cadastrar nova ferramenta
 * <b>Rota para remoção de ferramenta</b>: Remover ferramenta por "id"
 
+### 📋 Pré-requisitos
+Necessario instalação do MongoDB
+
 ## :wrench: Tecnologias utilizadas
 * Spring Boot;
 * MongoDB
@@ -25,6 +28,7 @@ Comando para iniciar a aplicação:
 ```
 mvn spring-boot:run
 ```
+## ⚙️ Executando os testes
 A aplicação estara disponivel para teste em:
 ```
 http://localhost:3000/swagger-ui/
