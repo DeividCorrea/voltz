@@ -27,14 +27,14 @@ public class ToolController {
 
     @GetMapping
     public ResponseEntity<List<Tool>> list () {
-        toolService.getAll();
-        return ResponseEntity.status(HttpStatus.OK)
+        return ResponseEntity.ok(toolService.getAll());
     }
 
     @PostMapping
     public ResponseEntity<Tool> save(@Valid @RequestBody ToolRequestDto toolRequestbody){
-        toolService.save(toolRequestbody);
-        return ResponseEntity.status(HttpStatus.CREATED);
+        //Tool tool = toolService.save(toolRequestbody)
+        //return ResponseEntity.status(HttpStatus.CREATED).body(tool)
+        return ResponseEntity.created(toolService.save(toolRequestbody));
     }
 
     @DeleteMapping("/{id}")
