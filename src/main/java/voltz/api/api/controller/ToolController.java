@@ -32,7 +32,7 @@ public class ToolController {
     }
 
     @PostMapping
-    public ResponseEntity<Void> save(@Valid @RequestBody ToolRequestDto toolRequestbody){
+    public ResponseEntity<Tool> save(@Valid @RequestBody ToolRequestDto toolRequestbody){
         toolService.save(toolRequestbody);
         return ResponseEntity.status(HttpStatus.CREATED);
     }
