@@ -7,7 +7,7 @@ import java.util.List;
 public interface ToolService {
 
 
-    void save(ToolRequestDto  toolRequest);
+    void save(ToolRequestDto toolRequestbody);
 
     List<Tool> getAll();
 
