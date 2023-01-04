@@ -13,7 +13,7 @@ import java.util.List;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class ToolDto {
+public class ToolRequestDto {
 
     private String title;
     private String link;
