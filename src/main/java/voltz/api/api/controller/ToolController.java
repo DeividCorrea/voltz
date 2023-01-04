@@ -26,20 +26,21 @@ public class ToolController {
 
 
     @GetMapping
-    public List<Tool> list () {
-        return toolService.getAll();
+    public ResponseEntity<List<Tool>> list () {
+        toolService.getAll();
+        return ResponseEntity.status(HttpStatus.OK)
     }
 
     @PostMapping
-    @ResponseStatus(HttpStatus.CREATED)
-    public String save(@Valid @RequestBody ToolDto tool){
-
-        return toolService.save(new Tool(tool));
+    public ResponseEntity<Void> save(@Valid @RequestBody ToolRequestDto toolRequestbody){
+        toolService.save(toolRequestbody);
+        return ResponseEntity.status(HttpStatus.CREATED);
     }
 
     @DeleteMapping("/{id}")
-    public void delete(@PathVariable String id){
-       toolService.delete(id);
+    public ResponseEntity<Void> delete(@PathVariable String id){
+        toolService.delete(id);
+        return ResponseEntity.status(HttpStatus.OK);
     }
 
     @ResponseStatus(HttpStatus.BAD_REQUEST)
