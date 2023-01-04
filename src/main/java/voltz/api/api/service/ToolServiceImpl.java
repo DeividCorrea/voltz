@@ -14,9 +14,9 @@ public class ToolServiceImpl implements ToolService {
     private ToolRepository toolRepository;
 
     @Override
-    public String save(Tool tool) {
-
-        return toolRepository.save(tool).getId();
+    public void  save(ToolRequestDto toolRequestBody) {
+        Tool tool = new Tool(toolRequestBody)
+        return toolRepository.save(tool);
     }
 
     @Override
